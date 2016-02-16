@@ -36,9 +36,20 @@
 
   <div class="container row">
     <form action="kwic-process.php" method="post" enctype="multipart/form-data">
-      Select a Text File to Upload:
-      <input type="file" name="fileToUpload" id="fileToUpload">
-      <input type="submit" value="Upload Text File" name="submit">
+      
+      <div class="col-md-12">
+        <h3>Select a file to apply the KWIC program</h3>
+        <div class="input-group">
+          <input type="file" class="button btn-default form-control" name="fileToUpload" id="fileToUpload">
+          <div class="input-group-btn">
+            <button type="submit button" class="btn btn-default" aria-label="Left Align">
+              <span class="glyphicon glyphicon-upload" aria-hidden="true"></span> Upload
+            </button>
+            <!--<input type="submit" class="btn btn-default glyphicon glyphicon-upload"  name="submit">-->
+          </div>
+        </div>
+      </div>
+      
     </form>
   </div>
     

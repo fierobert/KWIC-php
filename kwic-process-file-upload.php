@@ -17,7 +17,7 @@
 		//}
 		// Check if file already exists
 		if (file_exists($target_file)) {
-		    echo "There was a file with the same name. It was rewritten.";
+		    echo '<div class="alert alert-warning" role="alert">There was a file with the same name. It was rewritten.</div>';
 		    $uploadOk = 1;
 		}
 		// Check file size
@@ -27,20 +27,20 @@
 		//}
 		// Allow certain file formats
 		if($imageFileType != "txt" ) {
-		    echo "Sorry, only Text files are allowed, with extention .txt.";
+		    echo '<div class="alert alert-danger" role="alert">Sorry, only Text files are allowed, with extention .txt. </div>';
 		    $uploadOk = 0;
 		}
 		// Check if $uploadOk is set to 0 by an error
 		if ($uploadOk == 0) {
-		    echo "Sorry, your file was not uploaded.";
+		    echo '<div class="alert alert-danger" role="alert">Sorry, your file was not uploaded. </div>';
 		    return FALSE;
 		// if everything is ok, try to upload file
 		} else {
 		    if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
-		        echo "The file ". basename( $_FILES["fileToUpload"]["name"]). " has been uploaded.";
+		        echo '<div class="alert alert-success" role="alert">The file '. basename( $_FILES["fileToUpload"]["name"]). ' has been uploaded.</div>';
 		        return $target_file;
 		    } else {
-		        echo "Sorry, there was an error uploading your file.";
+		        echo '<div class="alert alert-danger" role="alert">Sorry, there was an error uploading your file.</div>';
 		        return FALSE;
 		    }
 		}

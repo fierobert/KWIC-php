@@ -17,7 +17,6 @@
     		return $shifted_array_of_sentences;
     	} else {
     		return FALSE;
-    	}
-		
+    	}		
 	}
 ?>
