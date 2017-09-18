@@ -7,3 +7,6 @@ KWIC is an acronym for Key Word In Context, the most common format for concordan
 
 Reference: Wikipedia
 
+## Architectural Styles: Decomposition & Uses:
+
+![alt text](https://raw.githubusercontent.com/fierobert/KWIC-php/master/architecuralDiagram.jpg)
