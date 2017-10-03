@@ -4,27 +4,11 @@
 		$target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
 		$uploadOk = 1;
 		$imageFileType = pathinfo($target_file,PATHINFO_EXTENSION);
-		// Check if image file is a actual image or fake image
-		//if(isset($_POST["submit"])) {
-		//    $check = getimagesize($_FILES["fileToUpload"]["tmp_name"]);
-		//    if($check !== FALSE) {
-		//        echo "File is an image - " . $check["mime"] . ".";
-		//        $uploadOk = 1;
-		//    } else {
-		//        echo "File is not an image.";
-		//        $uploadOk = 0;
-		//    }
-		//}
 		// Check if file already exists
 		if (file_exists($target_file)) {
 		    echo '<div class="alert alert-warning" role="alert">There was a file with the same name. It was rewritten.</div>';
 		    $uploadOk = 1;
 		}
-		// Check file size
-		//if ($_FILES["fileToUpload"]["size"] > 500000) {
-		//    echo "Sorry, your file is too large.";
-		//    $uploadOk = 0;
-		//}
 		// Allow certain file formats
 		if($imageFileType != "txt" ) {
 		    echo '<div class="alert alert-danger" role="alert">Sorry, only Text files are allowed, with extention .txt. </div>';
